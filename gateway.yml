@@ -1,0 +1,22 @@
+app.message: Hola mundo desde GATEWAY
+server.port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    registryFetchIntervalSeconds: 5
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationInSeconds: 5
+spring:
+  cloud:
+    gateway:
+      routes:
+        #micoservicio customers http://localhost:8080/customers/hello
+        - id: customers-service
+          uri: lb://customers-service #lowbalancer
+          predicates:
+            - Path=/customers-service/**
+        #OTROS microservicios
