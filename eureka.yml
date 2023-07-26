@@ -1,0 +1,17 @@
+server:
+  port: ${app.eureka-port}
+
+eureka:
+  instance:
+    hostname: ${app.eureka-server}
+    leaseRenewalIntervalInSeconds: 30
+  client:
+    registerWithEureka: false #que no se registre a si misma como servicio disponible
+    fetchRegistry: false #los clientes no detectan a eureka como servicio
+    serviceUrl:
+      defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
+  server: #eureka se comunica con los servicios, aqui se configura el refresco
+    waitTimeInMsWenSyncEmpty: 0
+    response-cache-update-interval-ms: 5000
+    enable-self-preservation: true
+    renewalPercentThreshold: 0.49
