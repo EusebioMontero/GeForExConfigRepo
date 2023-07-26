@@ -1,1 +1,5 @@
-app.message: Hola Mundo dese application base
+#Este archivo serviria como base para todos los demas servicios que se conecten
+app.message: Hola Mundo desde application base
+app.eureka-server: localhost
+app.eureka-port: 8761
+server.error.include-message: always
