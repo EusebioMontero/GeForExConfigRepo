@@ -11,7 +11,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
   server: #eureka se comunica con los servicios, aqui se configura el refresco
-    waitTimeInMsWenSyncEmpty: 0
+    waitTimeInMsWhenSyncEmpty: 0
     response-cache-update-interval-ms: 5000
     enable-self-preservation: true
     renewalPercentThreshold: 0.49
