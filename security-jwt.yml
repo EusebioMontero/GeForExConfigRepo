@@ -1,4 +1,6 @@
 app.message: Hola mundo desde Security Service
+app.security.jwt.secret: F63B68E11B16E9AD7667E978B1D9H #secreto usado para encriptar el token
+app.security.jwt.expiration: 86400 #el token expira en un dia
 server.port: ${app.security-port}
 
 eureka:
