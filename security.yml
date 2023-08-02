@@ -1,5 +1,5 @@
-app.message: Hola mundo desde SECURITY
-server.port: 8861
+server:
+  port: ${app.security-port}
 
 eureka:
   client:

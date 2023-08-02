@@ -1,5 +1,5 @@
-app.message: Hola mundo desde GATEWAY
-server.port: 8080
+server:
+  port: ${app.gateway-port}
 
 eureka:
   client:
