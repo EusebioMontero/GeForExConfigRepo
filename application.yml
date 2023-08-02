@@ -13,7 +13,8 @@ app.customer-port: 9000
 app.security-server: localhost
 app.security-port: 8861
 
-app.user_crud-server: localhost
-app.user_crud-port: 9010
+app.oracle-server: exa02db04-vip.gobex.pri
+app.oracle-port: 1521
+app.oracle-name: AGR_GESTIONFORESTAL
 
 server.error.include-message: always
