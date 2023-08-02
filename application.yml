@@ -15,6 +15,7 @@ app.security-port: 8861
 
 app.oracle-server: exa02db04-vip.gobex.pri
 app.oracle-port: 1521
+app.oracle-service-name: decorp5
 app.oracle-name: AGR_GESTIONFORESTAL
 
 server.error.include-message: always
