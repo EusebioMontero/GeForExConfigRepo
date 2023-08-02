@@ -1,0 +1,12 @@
+app.message: Hola mundo desde SECURITY
+server.port: 8861
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    registryFetchIntervalSeconds: 5
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationInSeconds: 5
