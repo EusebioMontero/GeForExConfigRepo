@@ -10,6 +10,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationInSeconds: 5
+
 spring:
   cloud:
     gateway:
@@ -23,9 +24,3 @@ spring:
           uri: lb://customers-service #lowbalancer
           predicates:
             - Path=/customers-service/**
-
-        - id: security
-          uri: lb://security #lowbalancer
-          predicates:
-            - Path=/security/**
-        #OTROS microservicios
