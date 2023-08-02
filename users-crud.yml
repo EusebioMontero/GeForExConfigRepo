@@ -1,5 +1,5 @@
 server:
-  port: ${app.user_crud-port}
+  port: ${app.oracle-port}
 
 eureka:
   client:
