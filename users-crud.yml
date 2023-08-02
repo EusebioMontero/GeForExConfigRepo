@@ -13,7 +13,8 @@ eureka:
 
 spring:
   datasource:
-    url: jdbc:oracle://${app.oracle-server}:${app.oracle-port}/${app.oracle-name}
+#    url: jdbc:oracle://${app.oracle-server}:${app.oracle-port}/${app.oracle-name}
+    url: jdbc:oracle:thin:${app.oracle-server}:${app.oracle-port}:${app.oracle-name}
     username: agr_gesfor
     password: gesfordesowner
     driver-class-name: oracle.jdbc.OracleDriver
