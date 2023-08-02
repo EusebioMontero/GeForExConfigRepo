@@ -23,4 +23,9 @@ spring:
           uri: lb://customers-service #lowbalancer
           predicates:
             - Path=/customers-service/**
+
+        - id: security
+          uri: lb://security #lowbalancer
+          predicates:
+            - Path=/security/**
         #OTROS microservicios
