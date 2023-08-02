@@ -4,6 +4,9 @@ app.message: Hola Mundo desde application base
 app.eureka-server: localhost
 app.eureka-port: 8761
 
+app.customer-server: localhost
+app.customer-port: 9000
+
 #app.security-server: localhost
 #app.security-port: 8861
 
