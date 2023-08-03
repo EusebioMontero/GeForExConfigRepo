@@ -15,7 +15,7 @@ spring:
     url: jdbc:oracle:thin:@${app.oracle-server}:${app.oracle-port}/${app.oracle-service-name}
     username: ${app.oracle-owner-name}
     password: ${app.oracle-password}
-    driver-class-name: ${oracle.jdbc.OracleDriver}
+    driver-class-name: ${app.oracle-driver}
   jpa:
     show-sql: true
     properties:
