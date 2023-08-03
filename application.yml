@@ -1,23 +1,23 @@
 #Este archivo serviría como base para todos los demás servicios que se conecten
 
-app.eureka-server: localhost
-app.eureka-port: 8761
+app.eureka-server-host: localhost
+app.eureka-server-port: 8761
 
-app.gateway-server: localhost
-app.gateway-port: 8080
+app.gateway-server-host: localhost
+app.gateway-server-port: 8080
 
-app.customer-server: localhost
+app.customer-host: localhost
 app.customer-port: 9000
 
-app.security-server: localhost
-app.security-port: 8861
+app.security-server-host: localhost
+app.security-server-port: 8861
 
-app.oracle-server: exa02db04-vip.gobex.pri
-app.oracle-port: 1521
+app.oracle-server-host: exa02db04-vip.gobex.pri
+app.oracle-server-port: 1521
 app.oracle-service-name: decorp5
-app.oracle-name: AGR_GESTIONFORESTAL
-app.oracle-owner-name: agr_gesfor
-app.oracle-password: gesfordesowner
+app.oracle-db-name: AGR_GESTIONFORESTAL
+app.oracle-db-owner-name: agr_gesfor
+app.oracle-db-password: gesfordesowner
 app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
 app.oracle-driver: oracle.jdbc.OracleDriver
 

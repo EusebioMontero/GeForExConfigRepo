@@ -4,17 +4,18 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
+      defaultZone: http://${app.eureka-server-host}:${app.eureka-server-port}/eureka/
     initialInstanceInfoReplicationIntervalSeconds: 5
     registryFetchIntervalSeconds: 5
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationInSeconds: 5
+
 spring:
   datasource:
-    url: jdbc:oracle:thin:@${app.oracle-server}:${app.oracle-port}/${app.oracle-service-name}
-    username: ${app.oracle-owner-name}
-    password: ${app.oracle-password}
+    url: jdbc:oracle:thin:@${app.oracle-server-host}:${app.oracle-server-port}/${app.oracle-service-name}
+    username: ${app.oracle-db-owner-name}
+    password: ${app.oracle-db-password}
     driver-class-name: ${app.oracle-driver}
   jpa:
     show-sql: true
@@ -22,6 +23,3 @@ spring:
       hibernate:
         dialect: ${app.oracle-dialect}
         format: true
-        jdbc:
-          use_get_generated_keys: false
-

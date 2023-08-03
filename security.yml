@@ -1,10 +1,10 @@
 server:
-  port: ${app.security-port}
+  port: ${app.security-server-port}
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
+      defaultZone: http://${app.eureka-server-host}:${app.eureka-server-port}/eureka/
     initialInstanceInfoReplicationIntervalSeconds: 5
     registryFetchIntervalSeconds: 5
   instance:
