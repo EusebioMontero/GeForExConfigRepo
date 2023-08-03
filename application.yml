@@ -1,5 +1,4 @@
-#Este archivo serviria como base para todos los demas servicios que se conecten
-app.message: Hola Mundo desde application base
+#Este archivo serviría como base para todos los demás servicios que se conecten
 
 app.eureka-server: localhost
 app.eureka-port: 8761
@@ -17,7 +16,9 @@ app.oracle-server: exa02db04-vip.gobex.pri
 app.oracle-port: 1521
 app.oracle-service-name: decorp5
 app.oracle-name: AGR_GESTIONFORESTAL
-app.oracle-ownername: agr_gesfor
+app.oracle-owner-name: agr_gesfor
 app.oracle-password: gesfordesowner
+app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
+app.oracle-driver: oracle.jdbc.OracleDriver
 
 server.error.include-message: always
