@@ -22,4 +22,6 @@ spring:
       hibernate:
         dialect: ${app.oracle-dialect}
         format: true
+        jdbc:
+          use_get_generated_keys: false
 
