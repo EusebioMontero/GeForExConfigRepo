@@ -17,5 +17,7 @@ app.oracle-server: exa02db04-vip.gobex.pri
 app.oracle-port: 1521
 app.oracle-service-name: decorp5
 app.oracle-name: AGR_GESTIONFORESTAL
+app.oracle-ownername: agr_gesfor
+app.oracle-password: gesfordesowner
 
 server.error.include-message: always

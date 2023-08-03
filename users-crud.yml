@@ -10,13 +10,11 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationInSeconds: 5
-#    url: jdbc:oracle://${app.oracle-server}:${app.oracle-port}/${app.oracle-name}
 spring:
   datasource:
     url: jdbc:oracle:thin:@${app.oracle-server}:${app.oracle-port}/${app.oracle-service-name}
-#    url: jdbc:oracle:thin:${app.oracle-server}:${app.oracle-port}:${app.oracle-name}
-    username: agr_gesfor
-    password: gesfordesowner
+    username: ${app.oracle-ownername}
+    password: ${app.oracle-password}
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     show-sql: true
