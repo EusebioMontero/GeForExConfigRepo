@@ -4,7 +4,7 @@ server:
 eureka:
   instance:
     hostname: ${app.eureka-server-host}
-    leaseRenewalIntervalInSeconds: 60
+    leaseRenewalIntervalInSeconds: 30
   client:
     registerWithEureka: false #que no se registre a si misma como servicio disponible
     fetchRegistry: false #los clientes no detectan a eureka como servicio
