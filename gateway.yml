@@ -14,7 +14,7 @@ eureka:
 spring:
   cloud:
     gateway:
-      default-filters[0]: TokenRelay #Deja pasar el token
+#      default-filters[0]: TokenRelay #Deja pasar el token
       routes:
 #        - id: security-jwt
 #          uri: lb//security-jwt
