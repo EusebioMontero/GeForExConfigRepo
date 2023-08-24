@@ -22,4 +22,4 @@ app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
 app.oracle-driver: oracle.jdbc.OracleDriver
 
 server.error.include-message: always
-
+#comentario
