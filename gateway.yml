@@ -10,7 +10,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationInSeconds: 5
-
+ñ
 spring:
   cloud:
     gateway:
@@ -20,8 +20,8 @@ spring:
 #          uri: lb//security-jwt
 #          predicates:
 #            -Path=/login
-        #micoservicio customers http://localhost:8080/customers/hello
-        - id: customers-service
+        #micoservicio customers http://localhost:8080/customers-service        - id: customers-service
+        -id: customers-service
           uri: lb://customers-service #lowbalancer
           predicates:
             - Path=/customers-service/** #lo que llege por la url /customers/ se redirige al customer-service
