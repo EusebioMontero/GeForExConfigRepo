@@ -24,7 +24,7 @@ spring:
         - id: customers-service
           uri: lb://customers-service #lowbalancer
           predicates:
-            - Path=/customers/** #lo que llege por la url /customers/ se redirige al customer-service
+            - Path=/customers-service/** #lo que llege por la url /customers/ se redirige al customer-service
 
         - id: users-crud
           uri: lb://users-crud #lowbalancer
