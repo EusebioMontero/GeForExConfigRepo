@@ -10,7 +10,6 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationInSeconds: 5
-ñ
 spring:
   cloud:
     gateway:
