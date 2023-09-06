@@ -13,19 +13,12 @@ eureka:
 spring:
   cloud:
     gateway:
-      #      default-filters[0]: TokenRelay #Deja pasar el token
       routes:
-        #        - id: security-jwt
-        #          uri: lb//security-jwt
-        #          predicates:
-        #            -Path=/login
-        #micoservicio customers http://localhost:8080/customers-service        - id: customers-service
         - id: customers-service
           uri: lb://customers-service #lowbalancer
           predicates:
             - Path=/customers-service/** #lo que llege por la url /customers/ se redirige al customer-service
-
         - id: security
-          uri: lb://auth #lowbalancer
+          uri: lb://security #lowbalancer
           predicates:
-            - Path=/auth/** #lo que llege por la url /customers/ se redirige al customer-service
+            - Path=/security/** #lo que llege por la url /customers/ se redirige al customer-service
