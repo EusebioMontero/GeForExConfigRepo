@@ -24,8 +24,8 @@ spring:
           uri: lb://customers-service #lowbalancer
           predicates:
             - Path=/customers-service/** #lo que llege por la url /customers/ se redirige al customer-service
-            
+
         - id: security
-          uri: lb:/auth #lowbalancer
+          uri: lb://auth #lowbalancer
           predicates:
             - Path=/auth/** #lo que llege por la url /customers/ se redirige al customer-service
