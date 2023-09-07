@@ -26,5 +26,3 @@ spring:
           uri: http://${app.security-server-host}:${app.security-server-port}/
           predicates:
             - Path=/hello/**
-          filters:
-            - TokenRelay=
