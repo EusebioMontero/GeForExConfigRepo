@@ -1,5 +1,5 @@
 server:
-  port: ${app.gateway-server-port}
+  port: 8080
 
 eureka:
   client:
@@ -15,6 +15,6 @@ spring:
     gateway:
       routes:
       - id: customers
-        uri: http://localhost:8090/
+        uri: http://localhost:8090
         predicates:
         - Path=/customers/**
