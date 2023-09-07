@@ -14,7 +14,7 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: custopmers
+      - id: customers
         uri: http://localhost:8090/
         predicates:
         - Path=/customers/**
