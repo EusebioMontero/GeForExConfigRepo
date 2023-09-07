@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: ${app.gateway-server-port}
 
 eureka:
   client:
@@ -14,7 +14,11 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: customers
-        uri: http://localhost:8090
-        predicates:
-        - Path=/customers/**
+        - id: customers
+          uri: http://${app.customer-host}:${app.customer-port}/
+          predicates:
+            - Path=/customers/**
+        - id: security
+          uri: http://${app.security-server-host}:${app.security-server-port}
+          predicates:
+            - Path=/security/**
