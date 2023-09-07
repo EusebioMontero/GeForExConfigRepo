@@ -27,4 +27,4 @@ spring:
           predicates:
             - Path=/hello/**
           filters:
-            - TokenRelay
+            - TokenRelay=
