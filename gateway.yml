@@ -15,14 +15,10 @@ spring:
     gateway:
       routes:
         - id: customers
-          uri: http://${app.customer-host}:${app.customer-port}/
+          uri: http://${app.customer-host}:${app.customer-port}/ 
           predicates:
             - Path=/customers/** #lo que llege por la url /customers/ se redirige al customer-service
         - id: security
-          uri: http://${app.security-server-host}:${app.security-server-port}/
+          uri: http://${app.security-server-host}:${app.security-server-port}/ 
           predicates:
-            - Path=/security/**
-        - id: hello
-          uri: http://${app.security-server-host}:${app.security-server-port}/
-          predicates:
-            - Path=/hello/**
+            - Path=/security/** 
