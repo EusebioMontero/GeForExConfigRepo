@@ -7,7 +7,7 @@ app.gateway-server-host: localhost
 app.gateway-server-port: 8080
 
 app.customer-host: localhost
-app.customer-port: 0 #Puerto aleatorio
+app.customer-port: 8090 
 
 app.security-server-host: localhost
 app.security-server-port: 8861
