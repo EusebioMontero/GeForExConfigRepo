@@ -15,6 +15,7 @@ spring:
     gateway:
       routes:
         - id: customers
-          uri: lb//${app.customer-host}:${app.customer-port}/ #lowbalancer
+          uri: lb://customers 
+          # uri: http://${app.customer-host}:${app.customer-port}/ 
           predicates:
             - Path=/customers/** #lo que llege por la url /customers/ se redirige al customer-service
