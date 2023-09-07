@@ -12,6 +12,9 @@ eureka:
     leaseExpirationInSeconds: 5
 spring:
   cloud:
+    loadbalancer:
+      ribbon:
+        elabled: false
     gateway:
       routes:
         - id: customers
