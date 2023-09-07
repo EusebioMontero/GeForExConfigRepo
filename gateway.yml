@@ -14,8 +14,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: customers
-          uri: http://${app.customer-host}:${app.customer-port}/ 
-          predicates:
-          - Path=/customers/** #lo que llege por la url /customers/ se redirige al customer-service
-          
+      - id: custopmers
+        uri: http://localhost:8090/
+        predicates:
+        - Path=/customers/**
