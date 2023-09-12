@@ -18,7 +18,8 @@ app.oracle-service-name: decorp5
 app.oracle-db-name: AGR_GESTIONFORESTAL
 app.oracle-db-owner-name: agr_gesfor
 app.oracle-db-password: gesfordesowner
-app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
+app.oracle-dialect: org.hibernate.dialect.OracleDialect 
+# app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
 app.oracle-driver: oracle.jdbc.OracleDriver
 
 server.error.include-message: always
