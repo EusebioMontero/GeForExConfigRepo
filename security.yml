@@ -3,14 +3,28 @@ server:
 
 spring:
   datasource:
-    url: jdbc:oracle:thin:@exa02db04-vip.gobex.pri:1521/decorp5
-    username: agr_gesfor
-    password: gesfordesowner
+    url: jdbc:oracle:thin:@${app.oracle-server-host}:${app.oracle-server-port}/${app.oracle-service-name}
+    username: ${app.oracle-db-owner-name}
+    password: ${app.oracle-db-password}
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     show-sql: true
     hibernate:
       dialect: org.hibernate.dialect.Oracle8iDialect
+
+      #OK!!
+# spring:
+#   datasource:
+#     url: jdbc:oracle:thin:@exa02db04-vip.gobex.pri:1521/decorp5
+#     username: agr_gesfor
+#     password: gesfordesowner
+#     driver-class-name: oracle.jdbc.OracleDriver
+#   jpa:
+#     show-sql: true
+#     hibernate:
+#       dialect: org.hibernate.dialect.Oracle8iDialect
+
+
 # spring:
 #   datasource:
 #     url: jdbc:oracle:thin:@${app.oracle-server-host}:${app.oracle-server-port}/${app.oracle-service-name}
