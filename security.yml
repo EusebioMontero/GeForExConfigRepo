@@ -6,11 +6,11 @@ spring:
     url: jdbc:oracle:thin:@${app.oracle-server-host}:${app.oracle-server-port}/${app.oracle-service-name}
     username: ${app.oracle-db-owner-name}
     password: ${app.oracle-db-password}
-    driver-class-name: oracle.jdbc.OracleDriver
+    driver-class-name: ${app.oracle-driver}
   jpa:
     show-sql: true
     hibernate:
-      dialect: org.hibernate.dialect.Oracle8iDialect
+      dialect: ${app.oracle-dialect}
 
       #OK!!
 # spring:
