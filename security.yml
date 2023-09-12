@@ -11,19 +11,7 @@ spring:
     show-sql: true
     hibernate:
       dialect: ${app.oracle-dialect}
-
-      #OK!!
-# spring:
-#   datasource:
-#     url: jdbc:oracle:thin:@exa02db04-vip.gobex.pri:1521/decorp5
-#     username: agr_gesfor
-#     password: gesfordesowner
-#     driver-class-name: oracle.jdbc.OracleDriver
-#   jpa:
-#     show-sql: true
-#     hibernate:
-#       dialect: org.hibernate.dialect.Oracle8iDialect
-
+      format: true
 
 # spring:
 #   datasource:
