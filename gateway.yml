@@ -1,5 +1,13 @@
+# server:
+#   port: ${app.gateway-server-port}
 server:
-  port: ${app.gateway-server-port}
+  port: 443
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.p12
+    key-store-password: geforex
+    key-store-type: PKCS12
+    key-alias: myCertLocal
 
 eureka:
   client:
@@ -15,10 +23,10 @@ spring:
     gateway:
       routes:
         - id: customers
-          uri: http://${app.customer-host}:${app.customer-port}/
+          uri: https://${app.customer-host}:${app.customer-port}/
           predicates:
             - Path=/customers/**
         - id: security
-          uri: http://${app.security-server-host}:${app.security-server-port}
+          uri: https://${app.security-server-host}:${app.security-server-port}
           predicates:
             - Path=/security/**
