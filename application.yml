@@ -1,16 +1,16 @@
 #Este archivo serviría como base para todos los demás servicios que se conecten
 
-# Propiedades sevidor Eureka
-app.eureka-server-host: localhost
-app.eureka-server-port: 8761
-
 # Propiedades sevidor Gateway
 app.gateway-server-host: localhost
-app.gateway-server-port: 8080
+app.gateway-server-port: 443
+
+# Propiedades sevidor Eureka
+app.eureka-server-host: localhost
+app.eureka-server-port: 453
 
 # Propiedades servidor seguridad
 app.security-server-host: localhost
-app.security-server-port: 8861
+app.security-server-port: 463
 
 # Propiedades servicio customer
 app.customer-host: localhost

@@ -1,7 +1,7 @@
 # server:
 #   port: ${app.gateway-server-port}
 server:
-  port: 443
+  port: ${app.gateway-server-port}
   ssl:
     enabled: true
     key-store: classpath:keystore.p12
@@ -12,7 +12,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${app.eureka-server-host}:${app.eureka-server-port}/eureka/
+      defaultZone: https://${app.eureka-server-host}:${app.eureka-server-port}/eureka/
     initialInstanceInfoReplicationIntervalSeconds: 5
     registryFetchIntervalSeconds: 5
   instance:
@@ -22,11 +22,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: customers
-          uri: http://${app.customer-host}:${app.customer-port}/
-          predicates:
-            - Path=/customers/**
+        # - id: customers
+        #   uri: http://${app.customer-host}:${app.customer-port}/
+        #   predicates:
+        #     - Path=/customers/**
         - id: security
-          uri: http://${app.security-server-host}:${app.security-server-port}
+          uri: https://${app.security-server-host}:${app.security-server-port}
           predicates:
             - Path=/security/**

@@ -1,7 +1,7 @@
 # server:
 #   port: ${app.security-server-port}
 server:
-  port: 453
+  port: ${app.security-server-port}
   ssl:
     enabled: true
     key-store: classpath:keystore.p12
@@ -29,7 +29,7 @@ app:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${app.eureka-server-host}:${app.eureka-server-port}/eureka/
+      defaultZone: https://${app.eureka-server-host}:${app.eureka-server-port}/eureka/
     initialInstanceInfoReplicationIntervalSeconds: 5
     registryFetchIntervalSeconds: 5
   instance:
