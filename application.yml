@@ -2,7 +2,7 @@
 
 # Propiedades sevidor Gateway
 app.gateway-server-host: localhost
-app.gateway-server-port: 8080
+app.gateway-server-port: 443
 
 # Propiedades sevidor Eureka
 app.eureka-server-host: localhost
