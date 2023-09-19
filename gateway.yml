@@ -31,8 +31,8 @@ spring:
           uri: https://${app.security-server-host}:${app.security-server-port}
           predicates:
             - Path=/security/**
-          filters:
-            - RewritePath=/localhost/(?<segment>.*), /$\{segment}
+          # filters:
+          #   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
           metadata:
             - key: X-Forwarded-Proto
               value: https
