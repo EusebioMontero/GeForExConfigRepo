@@ -5,7 +5,7 @@ eureka:
     hostname: ${app.eureka-server-host}
     leaseRenewalIntervalInSeconds: 30
   client:
-    registerWithEureka: false #que no se registre a si misma como servicio disponible
+    register-With-Eureka: false #que no se registre a si misma como servicio disponible
     fetchRegistry: false #los clientes no detectan a eureka como servicio
     serviceUrl:
       defaultZone: http://${app.eureka-server-host}:${app.eureka-server-port}/eureka/

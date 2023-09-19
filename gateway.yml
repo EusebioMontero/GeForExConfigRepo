@@ -18,6 +18,9 @@ eureka:
 spring:
   cloud:
     gateway:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
       routes:
         - id: customers
           uri: http://${app.customer-host}:${app.customer-port}/
