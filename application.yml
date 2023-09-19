@@ -2,15 +2,15 @@
 
 # Propiedades sevidor Gateway
 app.gateway-server-host: localhost
-app.gateway-server-port: 443
+app.gateway-server-port: 8080
 
 # Propiedades sevidor Eureka
 app.eureka-server-host: localhost
-app.eureka-server-port: 453
+app.eureka-server-port: 8761
 
 # Propiedades servidor seguridad
 app.security-server-host: localhost
-app.security-server-port: 463
+app.security-server-port: 8070
 
 # Propiedades servicio customer
 app.customer-host: localhost

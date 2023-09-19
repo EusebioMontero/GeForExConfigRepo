@@ -1,6 +1,5 @@
 server:
   port: ${app.customer-port}
-
 eureka:
   client:
     serviceUrl:
