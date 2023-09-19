@@ -1,5 +1,6 @@
 server:
   port: ${app.gateway-server-port}
+  forward-headers-strategy: native
   ssl:
     enabled: true
     key-store: classpath:keystore.p12
