@@ -22,12 +22,14 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "http://localhost:4200"
+            allowedOrigins: "*"
             allowedHeaders: "*"
             allowedMethods:
               - GET
               - POST
               - OPTIONS
+              - UPDATE
+              - DELETE
       httpclient:
         ssl:
           useInsecureTrustManager: true
