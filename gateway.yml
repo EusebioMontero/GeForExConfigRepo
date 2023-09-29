@@ -23,10 +23,14 @@ spring:
         ssl:
           useInsecureTrustManager: true
       routes:
-        - id: customers
-          uri: http://${app.customer-host}:${app.customer-port}/
+        - id: product-auth
+          uri: https://localhost:443/auth
           predicates:
-            - Path=/customers/**
+            - Path=/auth/**
+        - id: product
+          uri: https://localhost:443/producto
+          predicates:
+            - Path=/producto/**
         - id: security
           uri: https://${app.security-server-host}:${app.security-server-port}
           predicates:
