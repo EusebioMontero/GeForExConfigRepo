@@ -22,7 +22,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "127.0.0.1:443"
+            allowedOrigins: "*"
             allowedHeaders: "*"
             allowedMethods:
               - GET
@@ -30,7 +30,6 @@ spring:
               - OPTIONS
               - PUT
               - DELETE
-              - PATCH
       httpclient:
         ssl:
           useInsecureTrustManager: true
@@ -49,6 +48,6 @@ spring:
 #            - Path=/security/**
           # filters:
           #   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
-#          metadata:
-#            - key: X-Forwarded-Proto
-#              value: https
+          metadata:
+            - key: X-Forwarded-Proto
+              value: https
