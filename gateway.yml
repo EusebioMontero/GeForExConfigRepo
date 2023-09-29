@@ -19,6 +19,13 @@ eureka:
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
       httpclient:
         ssl:
           useInsecureTrustManager: true
