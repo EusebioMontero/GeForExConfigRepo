@@ -48,6 +48,6 @@ spring:
 #            - Path=/security/**
           # filters:
           #   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
-          metadata:
-            - key: X-Forwarded-Proto
-              value: https
+#          metadata:
+#            - key: X-Forwarded-Proto
+#              value: https
