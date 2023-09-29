@@ -22,7 +22,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: "127.0.0.1:443"
             allowedHeaders: "*"
             allowedMethods:
               - GET
@@ -30,24 +30,25 @@ spring:
               - OPTIONS
               - PUT
               - DELETE
+              - PATCH
       httpclient:
         ssl:
           useInsecureTrustManager: true
       routes:
         - id: auth
-          uri: https://localhost:443/auth
+          uri: https://localhost:443
           predicates:
             - Path=/auth/**
         - id: producto
           uri: https://localhost:443/producto
           predicates:
             - Path=/producto/**
-        - id: security
-          uri: https://${app.security-server-host}:${app.security-server-port}
-          predicates:
-            - Path=/security/**
+#        - id: security
+#          uri: https://${app.security-server-host}:${app.security-server-port}
+#          predicates:
+#            - Path=/security/**
           # filters:
           #   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
-          metadata:
-            - key: X-Forwarded-Proto
-              value: https
+#          metadata:
+#            - key: X-Forwarded-Proto
+#              value: https
