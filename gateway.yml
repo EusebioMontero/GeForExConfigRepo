@@ -19,23 +19,25 @@ eureka:
 spring:
   cloud:
     gateway:
-      global-cors:
+      globalcors:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
             allowedHeaders: "*"
-            allowedMethods: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - OPTIONS
+              - PUT
+              - DELETE
       httpclient:
         ssl:
           useInsecureTrustManager: true
       routes:
-        - id: auth
+        - id: product-auth
           uri: https://localhost:443/auth
           predicates:
             - Path=/auth/**
-            - Cookie=SESSION_ID, /auth/**
-#          filters:
-#            - RewritePath=/localhost/(?<segment>.*), /$\{segment}
         - id: product
           uri: https://localhost:443/producto
           predicates:
@@ -44,7 +46,8 @@ spring:
           uri: https://${app.security-server-host}:${app.security-server-port}
           predicates:
             - Path=/security/**
-
+          # filters:
+          #   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
           metadata:
             - key: X-Forwarded-Proto
               value: https
