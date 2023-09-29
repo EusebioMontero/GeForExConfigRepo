@@ -16,24 +16,6 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationInSeconds: 5
-#spring:
-#  datasource:
-#    url: jdbc:oracle:thin:@${app.oracle-server-host}:${app.oracle-server-port}/${app.oracle-service-name}
-#    username: ${app.oracle-db-owner-name}
-#    password: ${app.oracle-db-password}
-#    driver-class-name: ${app.oracle-driver}
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/crud
-    username: root
-    password: win98se
-    driver-class-name: com.mysql.jdbc.Driver
-
-  jpa:
-    show-sql: true
-    hibernate:
-      dialect: org.hibernate.dialect.MySQL8Dialect
-      format: true
 app:
   security:
     jwt:
