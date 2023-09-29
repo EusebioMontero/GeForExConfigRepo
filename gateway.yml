@@ -24,16 +24,12 @@ spring:
           '[/**]':
             allowedOrigins: "*"
             allowedHeaders: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - OPTIONS
-              - PUT
+            allowedMethods: "*"
       httpclient:
         ssl:
           useInsecureTrustManager: true
       routes:
-        - id: product-auth
+        - id: auth
           uri: https://localhost:443/auth
           predicates:
             - Path=/auth/**
