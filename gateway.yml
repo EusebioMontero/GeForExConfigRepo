@@ -39,7 +39,7 @@ spring:
           predicates:
             - Path=/auth/**
           filters:
-            - ModifyResponseCookie=SESSION_ID, /auth/**
+            - Cookie=SESSION_ID, /auth/**
 #            - RewritePath=/localhost/(?<segment>.*), /$\{segment}
         - id: product
           uri: https://localhost:443/producto
