@@ -13,8 +13,8 @@ app.security-server-host: localhost
 app.security-server-port: 8070
 
 # Propiedades servicio customer
-app.customer-host: localhost
-app.customer-port: 8090 
+#app.customer-host: localhost
+#app.customer-port: 8090
 
 # Propiedades Datasource
 app.oracle-server-host: exa02db04-vip.gobex.pri
