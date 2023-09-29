@@ -29,7 +29,6 @@ spring:
               - POST
               - OPTIONS
               - PUT
-              - DELETE
       httpclient:
         ssl:
           useInsecureTrustManager: true
