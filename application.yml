@@ -17,12 +17,12 @@ app.plantilla-host: localhost
 app.plantilla-server-port: 8082
 
 # Propiedades Datasource
-app.oracle-server-host: exa02db04-vip.gobex.pri
+app.oracle-server-host: preexa02.gobex.pri
 app.oracle-server-port: 1521
-app.oracle-service-name: decorp5
+app.oracle-service-name: sdrdescorpora5
 app.oracle-db-name: AGR_GESTIONFORESTAL
-app.oracle-db-owner-name: agr_gesfor
-app.oracle-db-password: gesfordesowner
+app.oracle-db-owner-name: agr_gesfor_app
+app.oracle-db-password: gesforD3sC0n
 app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
 app.oracle-driver: oracle.jdbc.OracleDriver
 server.error.include-message: always
