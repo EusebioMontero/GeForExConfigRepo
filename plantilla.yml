@@ -1,6 +1,6 @@
 #PLANTILLA
 server:
-  port: 8081
+  port: ${app.plantilla-server-port}
   # forward-headers-strategy: native
   # ssl:
   #   enabled: true

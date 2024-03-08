@@ -12,9 +12,9 @@ app.eureka-server-port: 8761
 app.security-server-host: localhost
 app.security-server-port: 8070
 
-# Propiedades servicio customer
-#app.customer-host: localhost
-#app.customer-port: 8090
+# Propiedades servicio plantilla
+app.plantilla-host: localhost
+app.plantilla-server-port: 8082
 
 # Propiedades Datasource
 app.oracle-server-host: exa02db04-vip.gobex.pri
