@@ -17,19 +17,19 @@ server:
 #   instance:
 #     leaseRenewalIntervalInSeconds: 5
 #     leaseExpirationInSeconds: 5
-# spring:
-#   datasource:
-#     url: jdbc:oracle:thin:@${app.oracle-server-host}:${app.oracle-server-port}/${app.oracle-service-name}
-#     username: ${app.oracle-db-owner-name}
-#     password: ${app.oracle-db-password}
-#     driver-class-name: ${app.oracle-driver}
-#   jpa:
-#     show-sql: true
-#     hibernate:
-#       dialect: ${app.oracle-dialect}
-#       format: true
-# app:
-#   security:
-#     jwt:
-#       secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
-#       expiration: 86400
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@${app.oracle-server-host}:${app.oracle-server-port}/${app.oracle-service-name}
+    username: ${app.oracle-db-owner-name}
+    password: ${app.oracle-db-password}
+    driver-class-name: ${app.oracle-driver}
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: ${app.oracle-dialect}
+      format: true
+app:
+  security:
+    jwt:
+      secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
+      expiration: 86400
