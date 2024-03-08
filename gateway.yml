@@ -1,3 +1,4 @@
+#GATEWAY
 server:
   port: ${app.gateway-server-port}
   forward-headers-strategy: native
@@ -21,33 +22,36 @@ spring:
     gateway:
       globalcors:
         corsConfigurations:
-          '[/**]':
+          "[/**]":
             allowedOrigins: "*"
             allowedHeaders: "*"
             allowedMethods:
               - GET
               - POST
-              - OPTIONS
               - PUT
               - DELETE
       httpclient:
         ssl:
           useInsecureTrustManager: true
       routes:
-        - id: auth
-          uri: https://localhost:443
+        - id: plantilla
+          uri: https://localhost:${app.plantilla-server-port}/
           predicates:
-            - Path=/auth/**
-        - id: producto
-          uri: https://localhost:443/producto
-          predicates:
-            - Path=/producto/**
+            - Path=/acercadeplantilla/**
+        # - id: auth
+        #   uri: https://localhost:443
+        #   predicates:
+        #     - Path=/auth/**
+        # - id: producto
+        #   uri: https://localhost:443/producto
+        #   predicates:
+        #     - Path=/producto/**
 #        - id: security
 #          uri: https://${app.security-server-host}:${app.security-server-port}
 #          predicates:
 #            - Path=/security/**
-          # filters:
-          #   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
+# filters:
+#   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
 #          metadata:
 #            - key: X-Forwarded-Proto
 #              value: https

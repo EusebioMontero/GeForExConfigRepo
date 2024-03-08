@@ -9,8 +9,8 @@ app.eureka-server-host: localhost
 app.eureka-server-port: 8761
 
 # Propiedades servidor seguridad
-app.security-server-host: localhost
-app.security-server-port: 8070
+# app.security-server-host: localhost
+# app.security-server-port: 8070
 
 # Propiedades servicio plantilla
 app.plantilla-host: localhost
