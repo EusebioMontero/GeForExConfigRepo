@@ -11,7 +11,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${app.eureka-server-host}:${app.eureka-server-port}/eureka/
+      defaultZone: http://${app.host}:${app.eureka-server-port}/eureka/
     initialInstanceInfoReplicationIntervalSeconds: 5
     registryFetchIntervalSeconds: 5
   instance:
@@ -34,10 +34,10 @@ spring:
         ssl:
           useInsecureTrustManager: true
       routes:
-        - id: plantilla
-          uri: https://localhost:${app.plantilla-server-port}/
-          predicates:
-            - Path=/acercadeplantilla/**
+        # - id: plantilla
+        #   uri: https://localhost:${app.plantilla-server-port}/
+        #   predicates:
+        #     - Path=/acercadeplantilla/**
         # - id: auth
         #   uri: https://localhost:443
         #   predicates:

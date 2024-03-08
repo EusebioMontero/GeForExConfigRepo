@@ -1,21 +1,5 @@
 #Este archivo serviría como base para todos los demás servicios que se conecten
-
-# Propiedades sevidor Gateway
-app.gateway-server-host: localhost
-app.gateway-server-port: 443
-
-# Propiedades sevidor Eureka
-app.eureka-server-host: localhost
-app.eureka-server-port: 8761
-
-# Propiedades servidor seguridad
-# app.security-server-host: localhost
-# app.security-server-port: 8070
-
-# Propiedades servicio plantilla
-app.plantilla-host: localhost
-app.plantilla-server-port: 8082
-
+app.host: geforex.com
 # Propiedades Datasource
 app.oracle-server-host: preexa02.gobex.pri
 app.oracle-server-port: 1521
@@ -26,4 +10,21 @@ app.oracle-db-password: gesforD3sC0n
 app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
 app.oracle-driver: oracle.jdbc.OracleDriver
 server.error.include-message: always
+
+# Propiedades sevidor Eureka
+app.eureka-server-port: 9010
+# Propiedades sevidor Gateway
+app.gateway-server-port: 9020
+
+
+
+# Propiedades servidor seguridad
+# app.security-server-host: localhost
+# app.security-server-port: 8070
+
+# Propiedades servicio plantilla
+app.plantilla-host: localhost
+app.plantilla-server-port: 8082
+
+
 
