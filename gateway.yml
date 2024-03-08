@@ -1,13 +1,13 @@
 #GATEWAY
 server:
   port: ${app.gateway-server-port}
-  forward-headers-strategy: native
-  ssl:
-    enabled: true
-    key-store: classpath:AutoFirmV3Store.p12
-    key-store-password: geforex
-    key-store-type: PKCS12
-    key-alias: autofirmadov3
+  # forward-headers-strategy: native
+  # ssl:
+  #   enabled: true
+  #   key-store: classpath:AutoFirmV3Store.p12
+  #   key-store-password: geforex
+  #   key-store-type: PKCS12
+  #   key-alias: autofirmadov3
 eureka:
   client:
     serviceUrl:
