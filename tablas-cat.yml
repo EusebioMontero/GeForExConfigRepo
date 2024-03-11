@@ -1,5 +1,5 @@
 server:
-  port: 9120
+  port: ${app.tablas-server-port}
   forward-headers-strategy: native
   ssl:
     enabled: false
