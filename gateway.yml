@@ -35,7 +35,7 @@ spring:
           useInsecureTrustManager: true
       routes:
         - id: auth/*
-          uri: https://localhost:9030/
+          uri: http://localhost:9030/
           predicates:
             - Path=/auth/**
 
