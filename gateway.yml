@@ -42,6 +42,15 @@ spring:
           uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
           predicates:
             - Path=/cruduser/acercade/**
+        - id: security.acercade.version
+          uri: http://${app.host}:${app.security-server-port}/security/acercade/
+          predicates:
+            - Path=/security/acercade/**  
+
+
+
+
+            
         - id: security/*
           uri: http://${app.host}:${app.security-server-port}/auth/
           predicates:
