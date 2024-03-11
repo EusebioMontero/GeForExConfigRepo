@@ -38,10 +38,10 @@ spring:
         #   uri: https://localhost:${app.plantilla-server-port}/
         #   predicates:
         #     - Path=/acercadeplantilla/**
-        # - id: auth
-        #   uri: https://localhost:443
-        #   predicates:
-        #     - Path=/auth/**
+        - id: auth
+          uri: https://${app.host}:${app.gateway-server-port}
+          predicates:
+            - Path=/auth/**
         # - id: producto
         #   uri: https://localhost:443/producto
         #   predicates:
