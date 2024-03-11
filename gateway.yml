@@ -34,8 +34,8 @@ spring:
         ssl:
           useInsecureTrustManager: true
       routes:
-        - id: auth/*
-          uri: http://localhost:9030/
+        - id: security/*
+          uri: http://${app.host}:${app.security-server-port}/
           predicates:
             - Path=/auth/**
 
@@ -45,7 +45,7 @@ spring:
             - Path=/usuarios/**
 
         - id: crud-user.permisos
-          uri: https://localhost:9010/
+          uri: https://${app.host}:9010/
           predicates:
             - Path=/permisos/**
 
