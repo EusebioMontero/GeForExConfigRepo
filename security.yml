@@ -2,7 +2,7 @@ server:
   port: ${app.security-server-port}
   forward-headers-strategy: native
   ssl:
-    enabled: true
+    enabled: false
     key-store: classpath:AutoFirmV3Store.p12
     key-store-password: geforex
     key-store-type: PKCS12
