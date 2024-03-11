@@ -20,10 +20,10 @@ app.security-server-port: 9030
 
 
 # Propiedades servidor CRUD-USER
-app.security-server-port: 9210
+app.crud-user-server-port: 9210
 
 # Propiedades servidor TABLAS
-app.security-server-port: 9220
+app.tablas-server-port: 9220
 
 
 
