@@ -38,7 +38,10 @@ spring:
           uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
           predicates:
             - Path=/tablas/acercade/**
-
+        - id: crud-user.acercade.version
+          uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
+          predicates:
+            - Path=/cruduser/acercade/**
         - id: security/*
           uri: http://${app.host}:${app.security-server-port}/auth/
           predicates:
@@ -54,10 +57,7 @@ spring:
           predicates:
             - Path=/permisos/**
 
-        - id: crud-user.acercade
-          uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
-          predicates:
-            - Path=/cruduser/acercade/**
+
 
             # - id: tablas # ESTA TIENE QUE SER LA ULTIMA!!!!
             #   uri: http://${app.host}:${app.tablas-server-port}/
