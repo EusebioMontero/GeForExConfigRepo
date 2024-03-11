@@ -54,10 +54,10 @@ spring:
           predicates:
             - Path=/cruduser/acercade/**
 
-        - id: tablas.acercade
-          uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
+        - id: tablas.acercade.version
+          uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/version
           predicates:
-            - Path=/tablas/acercade/**
+            - Path=/tablas/acercade/version
 
         # - id: tablas # ESTA TIENE QUE SER LA ULTIMA!!!!
         #   uri: http://${app.host}:${app.tablas-server-port}/
