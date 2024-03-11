@@ -50,9 +50,9 @@ spring:
             - Path=/permisos/**
 
         - id: crud-user.acercade
-          uri: http://${app.host}:${app.crud-user-server-port}/crud-user/acercade/
+          uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
           predicates:
-            - Path=/crud-user/acercade/**
+            - Path=/cruduser/acercade/**
 
         - id: tablas.acercade
           uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
