@@ -1,5 +1,5 @@
 server:
-  port: 9110
+  port: ${app.crud-user-server-port}
   forward-headers-strategy: native
   ssl:
     enabled: false
