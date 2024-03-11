@@ -45,22 +45,22 @@ spring:
             - Path=/usuarios/**
 
         - id: crud-user.permisos
-          uri: https://${app.host}:${app.crud-user-server-port}/permisos/
+          uri: http://${app.host}:${app.crud-user-server-port}/permisos/
           predicates:
             - Path=/permisos/**
 
         - id: crud-user.acercade
-          uri: https://${app.host}:${app.crud-user-server-port}/acercade/
+          uri: http://${app.host}:${app.crud-user-server-port}/acercade/
           predicates:
-            - Path=/acercade/**
+            - Path=/crud-user-/acercade/**
 
         - id: plantilla.acercade # nuevo nombre del route (el que quieras)
-          uri: https://localhost:9030/ # url a la que va a redirigir el las peticiones (**:puerto_del_servicio)
+          uri: http://localhost:9030/ # url a la que va a redirigir el las peticiones (**:puerto_del_servicio)
           predicates:
             - Path=/acercadeplantilla/** # que url va a redirigir al servicio
 
         - id: tablas # ESTA TIENE QUE SER LA ULTIMA!!!!
-          uri: https://localhost:9020/
+          uri: http://localhost:9020/
           predicates:
             - Path=/**
       # routes:
