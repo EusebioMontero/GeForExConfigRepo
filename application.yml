@@ -19,9 +19,15 @@ app.gateway-server-port: 9020
 app.security-server-port: 9030
 
 
-# Propiedades servicio plantilla
-app.plantilla-host: localhost
-app.plantilla-server-port: 8082
+# Propiedades servidor CRUD-USER
+app.security-server-port: 9210
+
+# Propiedades servidor TABLAS
+app.security-server-port: 9220
+
+
+
+
 
 
 
