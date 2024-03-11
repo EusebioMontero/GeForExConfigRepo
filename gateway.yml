@@ -60,7 +60,7 @@ spring:
             - Path=/acercadeplantilla/** # que url va a redirigir al servicio
 
         - id: tablas.acercade
-          uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
+          uri: http://${app.host}:${app.tablas-server-port}/acercade/
           predicates:
             - Path=/tablas/acercade/**
 
