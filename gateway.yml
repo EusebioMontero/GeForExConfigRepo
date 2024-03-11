@@ -52,7 +52,7 @@ spring:
         - id: crud-user.acercade
           uri: http://${app.host}:${app.crud-user-server-port}/acercade/
           predicates:
-            - Path=/crud-user-/acercade/**
+            - Path=/crud-user/acercade/**
 
         - id: plantilla.acercade # nuevo nombre del route (el que quieras)
           uri: http://localhost:9030/ # url a la que va a redirigir el las peticiones (**:puerto_del_servicio)
