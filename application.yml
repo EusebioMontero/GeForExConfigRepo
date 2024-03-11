@@ -15,12 +15,9 @@ server.error.include-message: always
 app.eureka-server-port: 9010
 # Propiedades sevidor Gateway
 app.gateway-server-port: 9020
-
-
-
 # Propiedades servidor seguridad
-# app.security-server-host: localhost
-# app.security-server-port: 8070
+app.security-server-port: 8070
+
 
 # Propiedades servicio plantilla
 app.plantilla-host: localhost
