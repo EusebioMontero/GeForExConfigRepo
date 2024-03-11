@@ -45,16 +45,13 @@ spring:
         - id: security.acercade.version
           uri: http://${app.host}:${app.security-server-port}/security/acercade/
           predicates:
-            - Path=/security/acercade/**  
-
-
-
+            - Path=/security/acercade/**            
+        - id: security/*
+          uri: http://${app.host}:${app.security-server-port}/security/
+          predicates:
+            - Path=/security/**
 
             
-        - id: security/*
-          uri: http://${app.host}:${app.security-server-port}/auth/
-          predicates:
-            - Path=/auth/**
 
         - id: crud-user.usuarios
           uri: http://${app.host}:${app.crud-user-server-port}/usuarios/
