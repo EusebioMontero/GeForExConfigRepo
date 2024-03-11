@@ -50,17 +50,12 @@ spring:
             - Path=/permisos/**
 
         - id: crud-user.acercade
-          uri: http://${app.host}:${app.crud-user-server-port}/acercade/
+          uri: http://${app.host}:${app.crud-user-server-port}/crud-user/acercade/
           predicates:
             - Path=/crud-user/acercade/**
 
-        - id: plantilla.acercade # nuevo nombre del route (el que quieras)
-          uri: http://localhost:9030/ # url a la que va a redirigir el las peticiones (**:puerto_del_servicio)
-          predicates:
-            - Path=/acercadeplantilla/** # que url va a redirigir al servicio
-
         - id: tablas.acercade
-          uri: http://${app.host}:${app.tablas-server-port}/acercade/
+          uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
           predicates:
             - Path=/tablas/acercade/**
 
@@ -85,6 +80,10 @@ spring:
 #          uri: https://${app.security-server-host}:${app.security-server-port}
 #          predicates:
 #            - Path=/security/**
+        # - id: plantilla.acercade # nuevo nombre del route (el que quieras)
+        #   uri: http://localhost:9030/ # url a la que va a redirigir el las peticiones (**:puerto_del_servicio)
+        #   predicates:
+        #     - Path=/acercadeplantilla/** # que url va a redirigir al servicio
 # filters:
 #   - RewritePath=/localhost/(?<segment>.*), /$\{segment}
 #          metadata:
