@@ -57,7 +57,7 @@ spring:
         - id: crud-user.acercade
           uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
           predicates:
-            - Path=/cruduser/acercade/**
+            - Path=/cruduser/**
 
             # - id: tablas # ESTA TIENE QUE SER LA ULTIMA!!!!
             #   uri: http://${app.host}:${app.tablas-server-port}/
