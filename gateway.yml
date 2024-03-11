@@ -40,19 +40,19 @@ spring:
             - Path=/auth/**
 
         - id: crud-user.usuarios
-          uri: https://localhost:9010/
+          uri: http://${app.host}:${app.crud-user-server-port}/usuarios/
           predicates:
             - Path=/usuarios/**
 
         - id: crud-user.permisos
-          uri: https://${app.host}:9010/
+          uri: https://${app.host}:${app.crud-user-server-port}/permisos/
           predicates:
             - Path=/permisos/**
 
-        - id: crud-user.version
-          uri: https://localhost:9010/
+        - id: crud-user.acercade
+          uri: https://${app.host}:${app.crud-user-server-port}/acercade/
           predicates:
-            - Path=/crud-user/**
+            - Path=/acercade/**
 
         - id: plantilla.acercade # nuevo nombre del route (el que quieras)
           uri: https://localhost:9030/ # url a la que va a redirigir el las peticiones (**:puerto_del_servicio)
