@@ -1,5 +1,5 @@
 #Este archivo serviría como base para todos los demás servicios que se conecten
-app.host: localhost
+app.host: geforex.com
 # Propiedades Datasource
 app.oracle-server-host: preexa02.gobex.pri
 app.oracle-server-port: 1521
