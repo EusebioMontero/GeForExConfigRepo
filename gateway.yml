@@ -34,13 +34,43 @@ spring:
         ssl:
           useInsecureTrustManager: true
       routes:
+        - id: auth/*
+          uri: https://localhost:9030/
+          predicates:
+            - Path=/auth/**
+
+        - id: crud-user.usuarios
+          uri: https://localhost:9010/
+          predicates:
+            - Path=/usuarios/**
+
+        - id: crud-user.permisos
+          uri: https://localhost:9010/
+          predicates:
+            - Path=/permisos/**
+
+        - id: crud-user.version
+          uri: https://localhost:9010/
+          predicates:
+            - Path=/crud-user/**
+
+        - id: plantilla.acercade # nuevo nombre del route (el que quieras)
+          uri: https://localhost:9030/ # url a la que va a redirigir el las peticiones (**:puerto_del_servicio)
+          predicates:
+            - Path=/acercadeplantilla/** # que url va a redirigir al servicio
+
+        - id: tablas # ESTA TIENE QUE SER LA ULTIMA!!!!
+          uri: https://localhost:9020/
+          predicates:
+            - Path=/**
+      # routes:
         # - id: plantilla
         #   uri: https://localhost:${app.plantilla-server-port}/
         #   predicates:
         #     - Path=/acercadeplantilla/**
-        - id: auth
-          uri: http://${app.host}:${app.security-server-port}
-          predicates:
+        # - id: auth
+        #   uri: http://${app.host}:${app.security-server-port}
+        #   predicates:
             - Path=/auth/**
         # - id: producto
         #   uri: https://localhost:443/producto
