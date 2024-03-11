@@ -39,7 +39,7 @@ spring:
         #   predicates:
         #     - Path=/acercadeplantilla/**
         - id: auth
-          uri: http://${app.host}:${app.gateway-server-port}
+          uri: http://${app.host}:${app.security-server-port}
           predicates:
             - Path=/auth/**
         # - id: producto
