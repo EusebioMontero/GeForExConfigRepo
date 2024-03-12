@@ -38,6 +38,10 @@ spring:
           uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
           predicates:
             - Path=/tablas/acercade/**
+        - id: tablas.**
+          uri: http://${app.host}:${app.tablas-server-port}/tablas/
+          predicates:
+            - Path=/tablas/**    
         - id: crud-user.acercade.version
           uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
           predicates:
