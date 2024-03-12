@@ -38,6 +38,25 @@ spring:
           uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
           predicates:
             - Path=/tablas/acercade/**
+<<<<<<< HEAD
+=======
+        - id: tablas.**
+          uri: http://${app.host}:${app.tablas-server-port}/tablas/
+          predicates:
+            - Path=/tablas/**    
+        - id: crud-user.acercade.version
+          uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
+          predicates:
+            - Path=/cruduser/acercade/**
+        - id: security.acercade.version
+          uri: http://${app.host}:${app.security-server-port}/security/acercade/
+          predicates:
+            - Path=/security/acercade/**            
+        - id: security/*
+          uri: http://${app.host}:${app.security-server-port}/security/
+          predicates:
+            - Path=/security/**
+>>>>>>> 53781300d1060596fc6333b572d68d69dbfca1bc
 
         - id: tablas/**
           uri: http://${app.host}:${app.tablas-server-port}/tablas/
