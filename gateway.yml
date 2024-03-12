@@ -39,6 +39,11 @@ spring:
           predicates:
             - Path=/tablas/acercade/**
 
+        - id: tablas/**
+          uri: http://${app.host}:${app.tablas-server-port}/tablas/
+          predicates:
+            - Path=/tablas/**
+
         - id: security/*
           uri: http://${app.host}:${app.security-server-port}/
           predicates:
