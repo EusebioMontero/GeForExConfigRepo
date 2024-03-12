@@ -26,6 +26,8 @@ security:
 spring:
   cloud:
     gateway:
+      global-filters:
+        - TokenRelay
       globalcors:
         corsConfigurations:
           "[/**]":
@@ -49,8 +51,7 @@ spring:
           uri: http://${app.host}:${app.tablas-server-port}/tablas/
           predicates:
             - Path=/tablas/**
-          filters:
-            - TokenRelay=
+    
 
         - id: crud-user.acercade
           uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
@@ -61,8 +62,7 @@ spring:
           uri: http://${app.host}:${app.crud-user-server-port}/cruduser/componentes/
           predicates:
             - Path=/cruduser/componentes/**
-          filters:
-            - TokenRelay=
+
             
         - id: security.acercade.version
           uri: http://${app.host}:${app.security-server-port}/security/acercade/
