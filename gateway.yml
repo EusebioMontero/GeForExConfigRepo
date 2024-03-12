@@ -47,10 +47,6 @@ spring:
 
         - id: tablas.com
           uri: http://${app.host}:${app.tablas-server-port}/tablas/
-          filters:
-            - AddRequestHeader:
-                name: Authorization
-                value: bearer $(bearer.token)
           predicates:
             - Path=/tablas/**
 
