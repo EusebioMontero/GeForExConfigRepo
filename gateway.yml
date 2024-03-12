@@ -35,31 +35,31 @@ spring:
           useInsecureTrustManager: true
       routes:
         - id: tablas.acercade.version
-          uri: http://${app.host}:${app.tablas-server-port}/tablas/acercade/
+          uri: lb://${app.host}:${app.tablas-server-port}/tablas/acercade/
           predicates:
             - Path=/tablas/acercade/**
         - id: crud-user.acercade.version
-          uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
+          uri: lb://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
           predicates:
             - Path=/cruduser/acercade/**
         - id: security.acercade.version
-          uri: http://${app.host}:${app.security-server-port}/security/acercade/
+          uri: lb://${app.host}:${app.security-server-port}/security/acercade/
           predicates:
             - Path=/security/acercade/**            
         - id: security/*
-          uri: http://${app.host}:${app.security-server-port}/security/
+          uri: lb://${app.host}:${app.security-server-port}/security/
           predicates:
             - Path=/security/**
 
             
 
         - id: crud-user.usuarios
-          uri: http://${app.host}:${app.crud-user-server-port}/usuarios/
+          uri: lb://${app.host}:${app.crud-user-server-port}/usuarios/
           predicates:
             - Path=/usuarios/**
 
         - id: crud-user.permisos
-          uri: http://${app.host}:${app.crud-user-server-port}/permisos/
+          uri: lb://${app.host}:${app.crud-user-server-port}/permisos/
           predicates:
             - Path=/permisos/**
 
