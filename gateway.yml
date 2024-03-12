@@ -49,6 +49,8 @@ spring:
           uri: http://${app.host}:${app.tablas-server-port}/tablas/
           predicates:
             - Path=/tablas/**
+          filters:
+            - TokenRelay=
 
         - id: crud-user.acercade
           uri: http://${app.host}:${app.crud-user-server-port}/cruduser/acercade/
