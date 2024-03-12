@@ -17,6 +17,12 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationInSeconds: 5
+security:
+  authorization:
+    header: Authorization
+    token:
+      extraction:
+        expression: "#{header.Authorization}"
 spring:
   cloud:
     gateway:
@@ -42,7 +48,9 @@ spring:
         - id: tablas.com
           uri: http://${app.host}:${app.tablas-server-port}/tablas/
           filters:
-            - AddRequestHeader: name=Authorization, value=bearer $(bearer.token)
+            - AddRequestHeader:
+                name: Authorization
+                value: bearer $(bearer.token)
           predicates:
             - Path=/tablas/**
 
