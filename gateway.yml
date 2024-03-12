@@ -40,7 +40,7 @@ spring:
             - Path=/tablas/acercade/**
 
         - id: tablas.com
-          uri: http://${app.host}:${app.tablas-server-port}/tablas/com
+          uri: http://${app.host}:${app.tablas-server-port}/tablas/com/
           predicates:
             - Path=/tablas/com/**
 
