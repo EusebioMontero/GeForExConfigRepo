@@ -2,7 +2,7 @@
 app:
   version: 0.0.1
 server:
-  port: 9001 #puerto del servidor Tomcat  
+  port: 9002 #puerto del servidor Tomcat  
   version: 0.0.1
   forward-headers-strategy: native
   ssl: #Configuracion HTTPS
