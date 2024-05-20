@@ -1,12 +1,11 @@
+
+#Este archivo serviría como base para todos los demás servicios que se conecten
 management:
   endpoints:
     web:
       exposure:
         include: env
-#Este archivo serviría como base para todos los demás servicios que se conecten
-app:
-  prueba: xxxx
-app.host: localhost
+app-host: localhost
 # Propiedades Datasource
 app.oracle-server-host: preexa02.gobex.pri
 app.oracle-server-port: 1521
