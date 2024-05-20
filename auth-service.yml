@@ -18,7 +18,7 @@ spring:
     #    jndi-name: weblogic/datasources/GeforexDS
     hikari:
       maximum-pool-size: 3
-    url: jdbc:oracle:thin:@${app.oracle.server.host}:${app.oracle.server.port}/${app.oracle.service.name}
+    url: jdbc:oracle:thin:@${app.oracle.server.host}:${app.oracle.server.port}/${app.oracle.service-name}
     username: agr_gesfor_app
     password: gesforD3sC0n
     driver-class-name: oracle.jdbc.OracleDriver
