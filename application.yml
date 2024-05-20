@@ -30,5 +30,5 @@ server:
     key-alias: autofirmadov3
 #####Propiedades especificas para cada Servicio
 #auth-service
-server:
+server-auth:
   port: 9110
