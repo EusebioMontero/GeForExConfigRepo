@@ -7,10 +7,11 @@ management:
         include: env
 app-host: localhost
 # Propiedades Datasource
-app.oracle-server-host: preexa01.gobex.pri
-app.oracle-server-port: 1521
-app.oracle-service-name: sdrdescorpora5
-app.oracle-db-name: AGR_GESTIONFORESTAL
+app:
+  oracle-server-host: preexa01.gobex.pri
+  oracle-server-port: 1521
+  oracle-service-name: sdrdescorpora5
+  oracle-db-name: AGR_GESTIONFORESTAL
 app.oracle-db-owner-name: agr_gesfor_app
 app.oracle-db-password: gesforD3sC0n
 app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
