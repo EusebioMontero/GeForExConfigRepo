@@ -9,14 +9,17 @@ app-host: localhost
 # Propiedades Datasource
 ds:
   oracle:
-    service-name: sdrdescorpora5
+    dialect: org.hibernate.dialect.Oracle8iDialect
+    driver: oracle.jdbc.OracleDriver    
     server:
       host: preexa01.gobex.pri
       port: 1521
+      service-name: sdrdescorpora5
+      error:
+        include-message: always
     db:
-     name: AGR_GESTIONFORESTAL
-     owner-name: agr_gesfor_app
-    password: gesforD3sC0n
-    dialect: org.hibernate.dialect.Oracle8iDialect
-    driver: oracle.jdbc.OracleDriver
-server.error.include-message: always
+      name: AGR_GESTIONFORESTAL
+      owner-name: agr_gesfor_app
+      password: gesforD3sC0n
+
+
