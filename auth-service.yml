@@ -13,17 +13,17 @@ app:
     jwt:
       secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
       expiration: 86400
-#spring:
-#  datasource: #Datasource Oracle
-#    #    jndi-name: weblogic/datasources/GeforexDS
-#    hikari:
-#      maximum-pool-size: 3
-#    url: jdbc:oracle:thin:@preexa01.gobex.pri:1521/sdrdescorpora5
-#    username: agr_gesfor_app
-#    password: gesforD3sC0n
-#    driver-class-name: oracle.jdbc.OracleDriver
-#  jpa:
-#    show-sql: true
-#    hibernate:
-#      dialect: org.hibernate.dialect.Oracle8iDialect
-#      format: true
+spring:
+  datasource: #Datasource Oracle
+    #    jndi-name: weblogic/datasources/GeforexDS
+    hikari:
+      maximum-pool-size: 3
+    url: jdbc:oracle:thin:@preexa01.gobex.pri:1521/sdrdescorpora5
+    username: agr_gesfor_app
+    password: gesforD3sC0n
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: org.hibernate.dialect.Oracle8iDialect
+      format: true
