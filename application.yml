@@ -7,7 +7,7 @@ management:
         include: env
 app-host: localhost
 # Propiedades Datasource
-app.oracle-server-host: preexa02.gobex.pri
+app.oracle-server-host: preexa01.gobex.pri
 app.oracle-server-port: 1521
 app.oracle-service-name: sdrdescorpora5
 app.oracle-db-name: AGR_GESTIONFORESTAL
