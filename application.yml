@@ -8,14 +8,17 @@ management:
 app-host: localhost
 # Propiedades Datasource
 app:
-  oracle-server-host: preexa01.gobex.pri
-  oracle-server-port: 1521
-  oracle-service-name: sdrdescorpora5
-  oracle-db-name: AGR_GESTIONFORESTAL
-app.oracle-db-owner-name: agr_gesfor_app
-app.oracle-db-password: gesforD3sC0n
-app.oracle-dialect: org.hibernate.dialect.Oracle8iDialect
-app.oracle-driver: oracle.jdbc.OracleDriver
+  oracle:
+    service-name: sdrdescorpora5
+    server:
+      host: preexa01.gobex.pri
+      port: 1521
+    db:
+     name: AGR_GESTIONFORESTAL
+     owner-name: agr_gesfor_app
+    password: gesforD3sC0n
+    dialect: org.hibernate.dialect.Oracle8iDialect
+    driver: oracle.jdbc.OracleDriver
 server.error.include-message: always
 
 # Propiedades sevidor Eureka
