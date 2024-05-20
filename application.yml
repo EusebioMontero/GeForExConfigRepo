@@ -7,7 +7,7 @@ management:
         include: env
 app-host: localhost
 # Propiedades Datasource
-app:
+ds:
   oracle:
     service-name: sdrdescorpora5
     server:
@@ -20,24 +20,3 @@ app:
     dialect: org.hibernate.dialect.Oracle8iDialect
     driver: oracle.jdbc.OracleDriver
 server.error.include-message: always
-
-# Propiedades sevidor Eureka
-app.eureka-server-port: 9010
-# Propiedades sevidor Gateway
-app.gateway-server-port: 9020
-# Propiedades servidor seguridad
-app.security-server-port: 9030
-
-
-# Propiedades servidor CRUD-USER
-app.crud-user-server-port: 9210
-
-# Propiedades servidor TABLAS
-app.tablas-server-port: 9220
-
-
-
-
-
-
-
