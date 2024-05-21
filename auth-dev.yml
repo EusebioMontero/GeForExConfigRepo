@@ -12,8 +12,8 @@ app:
   version: 8.1
   security:
     jwt:
-      secret: ${secret}
-      expiration: 86400
+      secret: ${jwt.secret}
+      expiration: ${jwt.expiration}
 spring:
   datasource: #Datasource Oracle
     #    jndi-name: weblogic/datasources/GeforexDS
