@@ -12,7 +12,7 @@ app:
   version: 8.1
   security:
     jwt:
-      secret: ${app.security.jwt.secret}
+      secret: ${secret}
       expiration: 86400
 spring:
   datasource: #Datasource Oracle
