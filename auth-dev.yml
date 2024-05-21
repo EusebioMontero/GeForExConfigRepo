@@ -17,13 +17,13 @@ app:
 spring:
   datasource: #Datasource Oracle
     #    jndi-name: weblogic/datasources/GeforexDS
-    hikari:
-      maximum-pool-size: 3
-    # url: jdbc:oracle:thin:@${ds.oracle.server.host}:${ds.oracle.server.port}/${ds.oracle.server.service-name}
-    url: ${url}
+
+    url: jdbc:oracle:thin:@${ds.oracle.server.host}:${ds.oracle.server.port}/${ds.oracle.server.service-name}
     username: ${ds.oracle.db.owner-name}
     password: ${ds.oracle.db.password}
     driver-class-name: ${ds.oracle.driver}
+    hikari:
+      maximum-pool-size: 3
   jpa:
     show-sql: true
     hibernate:
