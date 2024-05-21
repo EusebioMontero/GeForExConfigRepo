@@ -31,5 +31,5 @@ server:
 #####Propiedades especificas para cada Servicio
 #auth-service
 server-auth:
-  port: 9110
+  port: 9222
 
