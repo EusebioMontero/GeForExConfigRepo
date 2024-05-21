@@ -10,7 +10,7 @@ ds:
       host: preexa01.gobex.pri
       port: 1521
       service-name: sdrdescorpora5
-      url: jdbc:oracle:thin:@${ds.oracle.server.host}:${ds.oracle.server.port}:${ds.oracle.server.service-name}
+ 
       error:
         include-message: always
     db:
@@ -24,7 +24,7 @@ server:
     key-store-password: geforex
     key-store-type: PKCS12
     key-alias: autofirmadov3
-
+url: jdbc:oracle:thin:@${ds.oracle.server.host}:${ds.oracle.server.port}:${ds.oracle.server.service-name}
 jwt:
   secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
   expiration: 86400
