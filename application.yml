@@ -1,20 +1,16 @@
 
 #Este archivo serviría como base para todos los demás servicios que se conecten
-management:
-  endpoints:
-    web:
-      exposure:
-        include: env
 app-host: localhost
 # Propiedades Datasource
 ds:
   oracle:
     dialect: org.hibernate.dialect.Oracle8iDialect
     driver: oracle.jdbc.OracleDriver    
-    server:
+    server:      
       host: preexa01.gobex.pri
       port: 1521
       service-name: sdrdescorpora5
+      url: jdbc:oracle:thin:@${ds.oracle.server.host}:${ds.oracle.server.port}:${ds.oracle.server.service-name}
       error:
         include-message: always
     db:
@@ -28,6 +24,11 @@ server:
     key-store-password: geforex
     key-store-type: PKCS12
     key-alias: autofirmadov3
+app:
+  security:
+    jwt:
+      secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
+      expiration: 86400
 #####Propiedades especificas para cada Servicio
 
 

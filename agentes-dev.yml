@@ -1,6 +1,6 @@
 server:
   url-base: UrlBase
-  port: 9110
+  port: 9050
   forward-headers-strategy: native
   ssl: #Configuracion HTTPS
     enabled: true
@@ -12,14 +12,14 @@ app:
   version: 8.1
   security:
     jwt:
-      secret: ${app.security.jwt.secret}
-      expiration: ${app.security.jwt.expiration}
+      secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
+      expiration: 86400
 spring:
   datasource: #Datasource Oracle
     #    jndi-name: weblogic/datasources/GeforexDS
     hikari:
       maximum-pool-size: 3
-    url: ${ds.oracle.server.url}
+    url: jdbc:oracle:thin:@${ds.oracle.server.host}:${ds.oracle.server.port}/${ds.oracle.server.service-name}
     username: ${ds.oracle.db.owner-name}
     password: ${ds.oracle.db.password}
     driver-class-name: ${ds.oracle.driver}
