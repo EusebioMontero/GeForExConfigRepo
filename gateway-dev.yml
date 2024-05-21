@@ -1,0 +1,60 @@
+server:
+  port: 443
+  forward-headers-strategy: native
+  ssl:
+    enabled: true
+    key-store: classpath:AutoFirmV3Store.p12
+    key-store-password: geforex
+    key-store-type: PKCS12
+    key-alias: autofirmadov3
+
+spring:
+  cloud:
+    gateway:
+      global-cors:
+        corsConfigurations:
+          '[/**]':
+#            allowedOrigins: "http://192.168.105.63"
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
+      routes:
+        - id: config
+          uri: https://localhost:9001/
+          predicates:
+            - Path=/config/**
+        - id: auth
+          uri: https://localhost:9110/
+          predicates:
+            - Path=/auth/**
+        - id: crudUser
+          uri: https://localhost:9120/
+          predicates:
+            - Path=/crudUser/**
+        - id: tablas
+          uri: https://localhost:9130/
+          predicates:
+            - Path=/tablas/**
+        - id: expedientes
+          uri: https://localhost:9140/
+          predicates:
+            - Path=/expedientes/**
+        - id: documentos
+          uri: https://localhost:9150/
+          predicates:
+            - Path=/documentos/**
+        - id: historial
+          uri: https://localhost:9160/
+          predicates:
+            - Path=/historial/**
+        - id: agentes
+          uri: https://localhost:9170/
+          predicates:
+            - Path=/agentes/**

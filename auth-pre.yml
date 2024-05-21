@@ -11,8 +11,8 @@ app:
   version: 8.1
   security:
     jwt:
-      secret: ${jwt.secret}
-      expiration: ${jwt.expiration}
+      secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
+      expiration: 86400
 spring:
   datasource: #Datasource Oracle
     jndi-name: weblogic/datasources/GeforexDS
