@@ -1,6 +1,6 @@
 server:
   url-base: UrlBase
-  port: 9181
+  port: 9180
   forward-headers-strategy: native
   ssl: #Configuracion HTTPS
     enabled: true
