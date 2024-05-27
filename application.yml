@@ -3,6 +3,7 @@
 app-host: localhost
 # Propiedades Datasource
 ds:
+  jndi: weblogic/datasources/GeforexDS
   oracle:
     dialect: org.hibernate.dialect.Oracle8iDialect
     driver: oracle.jdbc.OracleDriver    
