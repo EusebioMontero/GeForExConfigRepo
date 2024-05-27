@@ -21,10 +21,10 @@ ds:
 server:
   ssl:
     enabled: true
-    key-store: classpath:AutoFirmV3Store.p12
-    key-store-password: geforex
-    key-store-type: PKCS12
-    key-alias: autofirmadov3
+    store: classpath:AutoFirmV3Store.p12
+    password: geforex
+    type: PKCS12
+    alias: autofirmadov3
 jwt:
   secret: askljdhfgenerarclaveconalgunaherramientacomokeypassasdasdggf
   expiration: 86400
