@@ -15,7 +15,7 @@ app:
       expiration: ${jwt.expiration}
 spring:
   datasource: #Datasource Oracle
-    jndi-name: weblogic/datasources/GeforexDS
+    jndi-name: ${ds.jndi}
     hikari:
       maximum-pool-size: 3
   jpa:
