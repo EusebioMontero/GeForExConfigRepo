@@ -17,9 +17,9 @@ spring:
   datasource: #Datasource Oracle
     jndi-name: ${ds.jndi}
     hikari:
-      maximum-pool-size: 3
+      maximum-pool-size: 5
   jpa:
-    show-sql: true
+    show-sql: false
     hibernate:
       dialect: ${ds.oracle.dialect}
       format: true
