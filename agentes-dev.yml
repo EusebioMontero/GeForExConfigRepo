@@ -4,10 +4,10 @@ server:
   forward-headers-strategy: native
   ssl: #Configuracion HTTPS
     enabled: true
-    key-store: ${server.ssl.key-store}
-    key-store-password: ${server.ssl.key-store-password}
-    key-store-type: ${server.ssl.key-store-type}
-    key-alias: autofirmadov3
+    key-store: ${server.ssl.store}
+    key-store-password: ${server.ssl.password}
+    key-store-type: ${server.ssl.type}
+    key-alias: ${server.ssl.alias}
 app:
   version: 8.1
   security:
