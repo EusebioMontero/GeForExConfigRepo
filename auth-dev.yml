@@ -21,8 +21,8 @@ spring:
     username: ${ds.oracle.db.owner-name}
     password: ${ds.oracle.db.password}
     driver-class-name: ${ds.oracle.driver}
-    hikari:
-      maximum-pool-size: 3
+    # hikari:
+    #   maximum-pool-size: 3
   jpa:
     show-sql: true
     hibernate:
