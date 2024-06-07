@@ -1,0 +1,25 @@
+server:
+  url-base: UrlBase
+  forward-headers-strategy: native
+  ssl: #Configuracion HTTPS
+    enabled: true
+    key-store: classpath:AutoFirmV3Store.p12
+    key-store-password: geforex
+    key-store-type: PKCS12
+    key-alias: autofirmadov3
+app:
+  version: 0.0.1
+  security:
+    jwt:
+      secret: ${jwt.secret}
+      expiration: ${jwt.expiration}
+spring:
+  datasource: #Datasource Oracle
+    jndi-name: ${ds.jndi}
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    show-sql: false
+    hibernate:
+      dialect: ${ds.oracle.dialect}
+      format: true
